@@ -1,0 +1,533 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  background: #f0f0f0;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: 400;
+  padding: 15px;
+  line-height: 30px;
+  z-index: 9999;
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+header a {
+  color: orange;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+}
+header a.logo {
+  color: orange;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+}
+header a.timerLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 10vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+button {
+  box-shadow: 10px 5px 5px grey;
+}
+
+.levels {
+  background-image: url(/img/Background-monochromatic.png);
+  background-size: cover;
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  height: 90vh;
+}
+.level {
+  margin: 20px 0px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+.level .bg {
+  display: block;
+  padding-bottom: 40%;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  border-radius: 25px;
+}
+.level .info {
+  display: block;
+  padding: 60px;
+  background: var(--first-level-main-color);
+  border-radius: 25px;
+}
+.level h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+.Level .hero {
+  display: block;
+  height: 30vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.Level .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: orange;
+  color: #fff;
+  padding: 20px;
+}
+.Level .title .info {
+  flex: 1 1 auto;
+}
+.Level .title h1 {
+  margin: 0;
+}
+.Level .title p {
+  margin: 0;
+}
+.Level a.share {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.Level .ingredients {
+  padding: 20px;
+}
+.Level .ingredients li {
+  line-height: 140%;
+}
+
+.Level .instructions {
+  padding: 20px;
+}
+.Level .step {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.Level .step .number {
+  font-size: 32px;
+  flex: 0 1 1.3em;
+}
+.Level .step .text {
+  flex: 1 0;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.Timer {
+  padding: 15px;
+  background: white;
+  font-size: 2em;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.Timer .name {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+.Timer .center {
+  padding: 20px 0;
+  display: block;
+  text-align: center;
+}
+.Timer input {
+  display: block;
+  font-size: 1em;
+  border: 2px solid orange;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin: 30px auto;
+  text-align: center;
+}
+.Timer button {
+  display: block;
+  font-size: 1em;
+  color: white;
+  border: 2px solid orange;
+  background: orange;
+  border-radius: 3px;
+  margin: 20px auto;
+}
+.Timer .timeLeft {
+  margin-top: 30px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.message {
+  padding: 100px 30px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+:root {
+  --header-color: #f6f6f6;
+  --first-level-main-color: rgb(2, 175, 179);
+  --second-level-main-color: #b0d240;
+  --third-level-main-color: #f2674a;
+  --all-levels-secondary-color: #f6f6f6;
+  --main-font-color: #f6f6f6;
+  --secondary-font-color: #1e1e1e;
+  --shadow-color: #1c1c1c;
+  --font-family: IBM Plex Mono !important;
+}
+
+.main-text {
+  font-family: IBM Plex Mono !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  text-align: center !important;
+
+  color: var(--main-font-color);
+}
+
+.secondary-text {
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--secondary-font-color);
+}
+
+button .first-level {
+  background: var(--first-level-main-color);
+  border: 4px solid var(--all-levels-secondary-color);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: 25px;
+}
+
+div .first-level .actions {
+  background: var(--all-levels-secondary-color);
+  border: 4px solid var(--first-level-main-color);
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: 25px;
+}
+
+div .first-level .primary {
+  background: #02afb3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+button .second-level {
+  background: var(--second-level-main-color);
+  border: 4px solid var(--all-levels-secondary-color);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: 25px;
+}
+header {
+  background-color: var(--header-color) !important;
+  padding: 0;
+}
+
+header img {
+  max-height: 8vh;
+}
+header #insignea {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  display: inline-block;
+}
+header #home {
+  position: absolute;
+  top: 0.2rem;
+  left: 1rem;
+  display: inline-block;
+}
+#imgFondo {
+  width: 100vw;
+  height: 92vh;
+  position: absolute;
+}
+#imgMono {
+  position: relative;
+  margin-left: 15vw;
+  margin-top: 23vh;
+}
+#dialogue {
+  position: absolute;
+  background-color: var(--first-level-main-color);
+  padding: 5%;
+  border-radius: 20px;
+  margin-top: 5vh;
+  width: 80vw;
+  margin-left: 5vw;
+  text-align: center;
+  color: white;
+  box-shadow: 10px 5px 5px grey;
+  font-family: var(--font-family);
+}
+#buttonNext {
+  position: relative;
+  background-color: unset;
+  border: none;
+  margin-left: 65vw;
+}
+#buttonNext img {
+  width: 100px;
+}
+#option-activity1 {
+  background: white;
+  border-radius: 20px;
+  padding: 1em;
+  width: 80%;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  border: 3px solid var(--first-level-main-color);
+  font-size: 0.7em;
+}
+/*
+  achievement css ñero
+*/
+.achievement {
+  position: fixed;
+  background-color: rgb(2, 175, 179, 0.5);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.achievement * {
+  position: relative;
+  font-family: var(--font-family);
+}
+
+.achievement .medal {
+  position: relative;
+  top: 15vh;
+  width: 100%;
+}
+
+.achievement .dialog {
+  background-color: white;
+  top: 25vh;
+  /* left: 8px; */
+  width: 80vw;
+  left: 5vw;
+  /* height: 60%; */
+  padding: 1em;
+  /* line-height: 40px; */
+  text-align: center;
+  border-radius: 20px;
+  border: 5px solid var(--second-level-main-color);
+  font-family: var(--font-family);
+  color: black;
+  -webkit-box-shadow: 10px 5px 5px grey;
+  box-shadow: 10px 5px 5px grey;
+}
+.achievement #nextActivity {
+  background-color: var(--second-level-main-color);
+  border: 4px solid var(--second-level-main-color);
+  font-family: var(--font-family);
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  top: 28vh;
+}
+
+.action-dialog {
+  color: white;
+  top: 30vh;
+  background: rgb(2, 80, 82);
+  padding: 10px;
+  margin: 11vw;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.menu-background {
+  background-image: url(/img/Background-monochromatic.png);
+  background-size: cover;
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.menu-card {
+  display: block;
+  padding-bottom: 100vh;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.insignea {
+  background-color: orange;
+  color: var(--main-font-color);
+}
+
+.personaje {
+  background-color: var(--second-level-main-color);
+  color: var(--main-font-color);
+}
+
+.personaje button {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.personaje button img {
+  margin: 0%;
+  max-width: 4rem;
+  padding: 3rem 0rem;
+}
+#seleccionar {
+  padding: 1rem;
+  background: var(--shadow-color);
+  border: 4px solid white;
+  color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: 25px;
+}
+
+.personaje img {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+}
+
+.insignea img,
+.personaje img {
+  max-width: 100%;
+}
+
+.insigneas {
+  background-image: url(/img/insigneas.jpg);
+  background-size: contain;
+  display: grid;
+  height: 90vh;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* ACCIONES ACTIVIDADES 2 */
+.action-activity-2 {
+  background-color: #f2674a;
+  position: relative;
+  top: 20vh;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.color-activity-2 {
+  background-color: var(--third-level-main-color) !important;
+}
+
+.next-activity-2 {
+  position: relative;
+  background-color: var(--third-level-main-color);
+  border: 4px solid var(--third-level-main-color);
+  font-family: var(--font-family);
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  left: 25vh;
+  top: 20vh;
+}
+
+.wrapper-step {
+  margin-bottom: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.select {
+  width: 30%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--third-level-main-color);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  margin-top: 15px;
+}
+
+.steps {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 2em;
+  }
+  #imgMono {
+    width: 30%;
+    top: 15vh;
+  }
+  #divOptions {
+    position: absolute !important;
+    left: 50%;
+    max-width: 50%;
+    top: 50%;
+  }
+  .medal {
+    width: 20% !important;
+  }
+}
