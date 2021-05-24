@@ -29,7 +29,7 @@ export default class Home extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{ paddingTop: "10vh" }}>
         <Helmet>
           <title>Hack </title>
         </Helmet>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = ({ setShow, show }) => {
   return (
     <header>
-      <Link to="/" id="home">
+      <Link to="/app" id="home">
         <img alt="home_icon" src="../img/home.png"></img>
       </Link>
       <Link to="/character" id="character">

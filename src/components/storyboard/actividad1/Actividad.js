@@ -81,7 +81,6 @@ class Actividad extends React.Component {
       background = await data[0].activities[0].backgrounds[1];
       dialogues = await data[0].activities[0].teacher_dialogs;
       dialoguesFriends = await data[0].activities[0].friends_dialogs;
-
     } catch (e) {
       console.error(e);
       data = null;
@@ -93,7 +92,7 @@ class Actividad extends React.Component {
       this.state;
 
     return (
-      <div>
+      <div style={{ paddingTop: "10vh" }}>
         <img
           src={dialoguesFriends[currentFriend].background}
           id="imgFondo"

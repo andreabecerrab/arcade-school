@@ -5,7 +5,7 @@ export default class Achievement extends React.Component {
   async componentDidMount() {}
   render() {
     return (
-      <div class="achievement">
+      <div class="achievement" style={{ paddingTop: "10vh" }}>
         <img
           class="medal"
           src="../../../../img/badge_amistad.png"

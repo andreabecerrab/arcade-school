@@ -30,7 +30,7 @@ export default class Levels extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{ paddingTop: "10vh" }}>
         <Helmet>
           <title>Hack </title>
         </Helmet>

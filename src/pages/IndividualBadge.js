@@ -2,7 +2,7 @@ import React from "react";
 
 const IndividualBadge = ({ setShow, show }) => {
   return (
-    <div className="menu-background">
+    <div className="menu-background" style={{ paddingTop: "10vh" }}>
       <div className="menu-card insignea">
         <img src="/img/insignia.png" />
         <h2>Insignea de la amistad</h2>

@@ -40,9 +40,12 @@ class CharacterIcon extends React.Component {
       "https://hack-girls-lat.herokuapp.com/img/avatars/girl_1_feliz.png";
 
     return (
-      <div className="menu-background">
+      <div className="menu-background" style={{ paddingTop: "10vh" }}>
         <div className="menu-card personaje">
-          <img src={avatar} src="avatar" alt="" />
+          <img
+            src="https://hack-girls-lat.herokuapp.com/img/avatars/girl_1_feliz.png"
+            alt=""
+          />
 
           <button
             onClick={() => {

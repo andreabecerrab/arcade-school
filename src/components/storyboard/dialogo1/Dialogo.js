@@ -38,7 +38,7 @@ export default class Dialogo extends React.Component {
   render() {
     const { background, dialogues, counterDialog } = this.state;
     return (
-      <div>
+      <div style={{ paddingTop: "10vh" }}>
         <img src={background} id="imgFondo" alt=""></img>
         <div id="dialogue">{dialogues[counterDialog]}</div>
         <img

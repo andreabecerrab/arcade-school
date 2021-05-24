@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import IfOffline from "./components/IfOffline";
 import "./App.css";
 import Dialogo from "./components/storyboard/dialogo1/Dialogo";
-import Dialogo2 from "./components/storyboard/dialogo2/Dialogo2"
+import Dialogo2 from "./components/storyboard/dialogo2/Dialogo2";
 import Actividad from "./components/storyboard/actividad1/Actividad";
 import Actividad2 from "./components/storyboard/activityTwo/actividad2";
 import Achievement from "./components/storyboard/achievement/achievement";
@@ -15,6 +15,7 @@ import Badges from "./pages/Badges";
 import Levels from "./pages/Levels";
 import IndividualBadge from "./pages/IndividualBadge";
 import CharacterIcon from "./pages/CharacterIcon";
+import InitialPage from "./pages/InitialPage";
 
 const history = createBrowserHistory();
 
@@ -30,9 +31,13 @@ export default class App extends React.Component {
     return (
       <Router history={history}>
         <div>
-          <Header> <IfOffline>  </IfOffline></Header>
           <main>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={InitialPage} />
+            <Header>
+              {" "}
+              <IfOffline> </IfOffline>
+            </Header>
+            <Route exact path="/app" component={Home} />
             <Route exact path="/level/:level" component={Levels} />
             <Route path="/level/activity/1" component={Actividad} />
             <Route path="/level/activity/2" component={Actividad2} />

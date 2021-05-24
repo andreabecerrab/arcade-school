@@ -315,7 +315,7 @@ class Actividad2 extends React.Component {
     } = this.state;
 
     return (
-      <div>
+      <div style={{ paddingTop: "10vh" }}>
         <img
           src="https://hack-girls-lat.herokuapp.com/img/two/kermes1.png"
           id="imgFondo"
