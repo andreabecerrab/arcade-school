@@ -1,6 +1,6 @@
 # 🌸Hack girls LAT🌸
 
-## Nombre de app
+## Cracking the arcade school
 
 ![Captura de juego](.readme-static/Captura.png)
 
